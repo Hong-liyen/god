@@ -121,8 +121,15 @@ a.more{
   border-bottom: 1px solid #604100;
 }
 
+.index_news .news_list .list:hover{
+  background: #FFF9E8;
+  cursor: pointer;
+  transition: all .5s;
+}
+
 .index_news .news_list .tag {
-  line-height: 2;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   color: #fff;
   background: #604100;
@@ -186,7 +193,7 @@ footer .title {
 /*//footer*/
 @media only screen and (min-width: 1200px) {
   body {
-    margin-top: 150px;
+    margin-top: 135px;
   }
   .mobile {
     display: none;
@@ -261,7 +268,7 @@ footer .title {
     align-items: center;
     width: calc(100% - 20px);
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
   .scroll .row_top {
@@ -282,13 +289,18 @@ footer .title {
   }
 
   .menu_top_center a.active {
-    color: #604100;
+    position: relative;
+    color: #b37e26;
   }
 
-  .menu_top_right a {
-    font-size: 14px;
-    color: #604100;
-    background-color: #ede788;
+  .menu_top_center a::before{
+    content: url(../images/menu_hover_s.png);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    opacity: 1;
+    transition: .3s;
   }
 
   .scroll .menu_top_left img {
@@ -315,7 +327,6 @@ footer .title {
   /*footer-fixed*/
   #right-fixed {
     position: fixed;
-    width: 55px;
     text-align: center;
     right: 15px;
     bottom: 10%;
@@ -327,19 +338,6 @@ footer .title {
   }
   #right-fixed .icons a {
     display: block;
-    margin-bottom: 10px;
-  }
-  .topicon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    width: 53px;
-    height: 53px;
-    background: #444 url(../images/up.svg) 50% 15px no-repeat;
-    border-radius: 100%;
-    padding-top: 15px;
-    font-size: 14px;
   }
   /*//footer-fixed*/
 }
